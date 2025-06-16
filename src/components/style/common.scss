@@ -1,0 +1,22 @@
+@import "./theme.scss";
+@each $theme-name, $theme-vars in $themes {
+  html[lf-theme="#{$theme-name}"] {
+    @each $var-name, $var-value in $theme-vars {
+      --#{$var-name}: #{$var-value};
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 20px !important;
+  }
+}
+
+html {
+  font-size: 16px;
+  position: relative;
+  @each $var-name, $var-value in map-get($themes, default) {
+    --#{$var-name}: #{$var-value};
+  }
+}

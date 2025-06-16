@@ -1,0 +1,11 @@
+$themes: (
+  default: (
+    button-disabled-bg: rgba(0, 0, 0, 0.04),
+    button-primary-bg: rgb(64, 150, 255),
+    font-a-color: var(--button-primary-bg),
+    font-primary-color: rgb(255, 255, 255),
+    font-default-color: #000000,
+    font-disabled-color: rgba(0, 0, 0, 0.25),
+    button-primary-border: rgba(217, 217, 217),
+  ),
+);

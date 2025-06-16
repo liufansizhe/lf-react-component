@@ -1,0 +1,42 @@
+#lf-message {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: height 0.3s;
+  background: red;
+  .lf-message-item {
+    background: green;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    border-radius: 0.3em;
+    &-show {
+      animation: show 0.3s ease-in-out;
+    }
+    &-hide {
+      animation: hide 0.3s ease-in-out;
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(calc(-1em - 100%));
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(-1em - 100%));
+  }
+}
